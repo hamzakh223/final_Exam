@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./TrafficLightSimulator.css";
 
+//light logic
 const TrafficLightSimulator = () => {
   const [activeLight, setActiveLight] = useState("red");
 
@@ -8,13 +9,28 @@ const TrafficLightSimulator = () => {
     const sequence = ["red", "yellow", "green"];
     let index = 0;
 
+// time for track for 3 seconds
     const interval = setInterval(() => {
       index = (index + 1) % sequence.length;
       setActiveLight(sequence[index]);
     }, 3000);
 
+//set interval to change light 3 seconds;
+    useEffect(()=>{
+    let index=1;
+    const interval=setInterval(()=>
+    {
+          setActiveLight((TrafficLightSimulator)=>)
+                {
+                   const sequence=["green","yellow","red"]   
+                }
+    })
+
+    }
+    
+
     return () => clearInterval(interval);
-  }, []);
+  }, [],3000);
 
   return (
     <div className="traffic-light">
