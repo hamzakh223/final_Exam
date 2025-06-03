@@ -15,22 +15,6 @@ const TrafficLightSimulator = () => {
       setActiveLight(sequence[index]);
     }, 3000);
 
-//set interval to change light 3 seconds;
-    useEffect(()=>{
-    let index=1;
-    const interval=setInterval(()=>
-    {
-          setActiveLight((TrafficLightSimulator)=>)
-                {
-                   const sequence=["green","yellow","red"]   
-                }
-    })
-
-    }
-    
-
-    return () => clearInterval(interval);
-  }, [],3000);
 
   return (
     <div className="traffic-light">
@@ -39,6 +23,7 @@ const TrafficLightSimulator = () => {
       <div className={`light green ${activeLight === "green" ? "active" : ""}`}></div>
     </div>
   );
-};
+});
+
 
 export default TrafficLightSimulator;
